@@ -15,6 +15,8 @@ public class Main {
 
         index = new int[]{1, 3, 2, 2, 4, 5, 65, 77, 5};
         task4(index);
+
+        taskAddProblem1();
     }
 
     /**
@@ -65,4 +67,35 @@ public class Main {
         for (int i = 0; i < arrayIndex.length; i++) if (arrayIndex[i] % 2 > 0) arrayIndex[i]++;
         System.out.println(Arrays.toString(arrayIndex));
     }
+
+    // Задачи массивы Урок 2
+
+    /**
+     * Метод для генерации массива заданной длины и разряда значений
+     *
+     * @param arrayLength -- длина массива
+     * @param numberDigits -- количество цифр у каждого числа массива
+     * @return массив случайных чисел
+     */
+    public static int[] generateRandomArray(int arrayLength, int numberDigits) {
+            java.util.Random random = new java.util.Random();
+            int[] arr = new int[arrayLength];
+            for (int i = 0; i < arr.length; i++) {
+                arr[i] = random.nextInt((int) Math.pow(10,numberDigits) + (int) Math.pow(10^numberDigits,numberDigits));
+            }
+            return arr;
+        }
+
+        public static void taskAddProblem1() {
+            System.out.println("\nДополнительная Задача №1");
+//      Пишем код для задачи 1
+            int[] nums = generateRandomArray(5, 5);
+            int target = 5;
+            target += nums[2];
+            System.out.println(target);
+            System.out.println(nums[0]);
+            System.out.println(nums.length);
+        }
+
+
 }
